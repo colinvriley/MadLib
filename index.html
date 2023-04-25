@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MadLibs</title>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    
+    <body>
+       
+<form id="myForm">
+
+<h3>Any name</h3>
+   <label for="name"></label>
+    <input type="text" id="name" name="name">
+ <h3>   Any noun that is not a person</h3>
+   <label for="noun1"></label>
+    <input type="text" id="noun1" name="noun1">
+<h3>Any verb that ends in "ing"</h3>
+<label for="verb1"></label>
+    <input type="text" id="verb1" name="verb1">
+      <label for="adj1"></label>
+      <h3>Any adjective that ends in "est"<h3>
+    <input type="text" id="adj1" name="adj1">
+    <h3>Different name<h3>
+    <label for="name1"></label>
+    <input type="text" id="name1" name="name1">
+      <input type="submit" value="Submit">
+ <script>
+    var form=document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var name=document.getElementById("name").value;
+        
+        var formContents=document.getElementById("formContentsHere");
+        formContents.innerHTML = "One day there was a little boy named " + name;
+        
+        
+    });
+
+
+     var form=document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var adj1=document.getElementById("adj1").value;
+
+        var formContents=document.getElementById("formContentsHere1");
+        formContents.innerHTML = "He was the " + adj1; 
+
+        
+
+    });
+
+
+     var form=document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var name1=document.getElementById("name1").value;
+
+        var formContents=document.getElementById("formContentsHere2");
+        formContents.innerHTML = "His father's name was " + name1; 
+
+    });
+
+        var form=document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var noun1=document.getElementById("noun1").value;
+
+        var formContents=document.getElementById("formContentsHere3");
+        formContents.innerHTML = "He will save the world from a killer " + noun1; 
+
+
+    });
+
+
+     var form=document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var verb1=document.getElementById("verb1").value;
+
+        var formContents=document.getElementById("formContentsHere4");
+        formContents.innerHTML = "He will do this by " + verb1; 
+
+
+    });
+</script>
+<div id="formContentsHere"></div>
+<div id="formContentsHere1"></div>
+<div id="formContentsHere2"></div>
+<div id="formContentsHere3"></div>
+<div id="formContentsHere4"></div>
+<div id="formContentsHere"></div>
+
+<div class="container">
+    <h1 class="neonText">
+          
+    </h1>
+    
+
+ </div>
+   </body>
+</html>
+
